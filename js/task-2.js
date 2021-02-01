@@ -23,12 +23,14 @@ const ingredients = [
     'Зелень',
     'Приправы',
 ];
-const liIngredients = document.createElement('li');
-for (const item of ingredients) { liIngredients.appendChild(document.createElement('ul')).classList.add(item); }
+const ulIngredients = document.querySelector('ul#ingredients');
+ulIngredients.appendChild(document.createElement('h2')).innerHTML = 'Ингридиенты:';
+ulIngredients.style.color = 'blue';
+for (const item of ingredients) { ulIngredients.appendChild(document.createElement('li')).innerHTML = item; }
 // альтернатива циклу метод map
 // ingredients.map(function (element) {
 //     return liIngredients.appendChild(document.createElement('ul')).classList.add(element);
 // });
 
 
-console.log(liIngredients);
+console.log(ulIngredients);
