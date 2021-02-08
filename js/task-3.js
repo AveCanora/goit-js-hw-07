@@ -27,26 +27,40 @@
 //   },
 // ];
 
+
+
+
+// ***************Вариант решения №1***********************
 import imagesObj from './images.js';
-
-const createImages = img => {
-    const liGallery = document.createElement('li');
-    liGallery.classList.add('js-gallery_li');
-
-    const imgGallery = document.createElement('img');
-    imgGallery.src = img.url;
-    imgGallery.alt = img.alt;
-    imgGallery.width = 400;
-
-    liGallery.append(imgGallery);
-    return liGallery;
-
-}
-const imagesLi = imagesObj.map(img => createImages(img));
 const ulGallery = document.querySelector('ul#gallery');
 ulGallery.className = 'js-gallery';
-ulGallery.append(...imagesLi);
-// АЛЬТЕРНАТИВА
+const elementLi = imagesObj.map(el => `<li class="js-gallery_li"><img src=${el.url} alt=${el.alt} width="400"></li>`).join('');
+console.log(elementLi);
+ulGallery.insertAdjacentHTML('beforeend', elementLi);
+
+// ***************Вариант решения №2***********************
+// import imagesObj from './images.js';
+
+// const createImages = img => {
+//     const liGallery = document.createElement('li');
+//     liGallery.classList.add('js-gallery_li');
+
+//     const imgGallery = document.createElement('img');
+//     imgGallery.src = img.url;
+//     imgGallery.alt = img.alt;
+//     imgGallery.width = 400;
+
+//     liGallery.append(imgGallery);
+//     return liGallery;
+
+// }
+// const imagesLi = imagesObj.map(img => createImages(img));
+// const ulGallery = document.querySelector('ul#gallery');
+// ulGallery.className = 'js-gallery';
+// ulGallery.append(...imagesLi);
+
+
+// ***************Вариант решения №3***********************
 // const ulGallery = document.querySelector('ul#gallery');
 // ulGallery.className = 'js-gallery';
 // for (const item of imagesObj) {
@@ -57,6 +71,5 @@ ulGallery.append(...imagesLi);
 //     imgGallery.alt = item.alt;
 //     imgGallery.width = 400;
 // }
-
 
 
