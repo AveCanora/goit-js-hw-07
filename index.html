@@ -13,76 +13,90 @@
 
 <body>
     <!-- Task-1 -->
-    <h1 style="color:yellowgreen;">Task-1</h1>
-    <ul id="categories">
-        <li class="item">
-            <h2>Животные</h2>
-            <ul>
-                <li>Кот</li>
-                <li>Хомяк</li>
-                <li>Лошадь</li>
-                <li>Попугай</li>
-            </ul>
-        </li>
-        <li class="item">
-            <h2>Продукты</h2>
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-1</h1>
+        <ul id="categories">
+            <li class="item">
+                <h2>Животные</h2>
+                <ul>
+                    <li>Кот</li>
+                    <li>Хомяк</li>
+                    <li>Лошадь</li>
+                    <li>Попугай</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Продукты</h2>
 
-            <ul>
-                <li>Хлеб</li>
-                <li>Петрушка</li>
-                <li>Творог</li>
-            </ul>
-        </li>
-        <li class="item">
-            <h2>Технологии</h2>
+                <ul>
+                    <li>Хлеб</li>
+                    <li>Петрушка</li>
+                    <li>Творог</li>
+                </ul>
+            </li>
+            <li class="item">
+                <h2>Технологии</h2>
 
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node</li>
-            </ul>
-        </li>
-    </ul>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <!-- Task-2 -->
-    <h1 style="color:yellowgreen;">Task-2</h1>
-    <ul id="ingredients"></ul>
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-2</h1>
+        <ul id="ingredients"></ul>
+    </div>
     <!-- Task-3 -->
-    <h1 style="color:yellowgreen;">Task-3</h1>
-    <ul id="gallery"></ul>
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-3</h1>
+        <ul id="gallery"></ul>
+    </div>
     <!-- Task-4 -->
-    <h1 style="color:yellowgreen;">Task-4</h1>
-    <div id="counter" class="js-counter">
-        <button type="button" data-action="decrement" class="js-button">-1</button>
-        <span id="value">0</span>
-        <button type="button" data-action="increment" class="js-button">+1</button>
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-4</h1>
+        <div id="counter" class="js-counter">
+            <button type="button" data-action="decrement" class="js-button">-1</button>
+            <span id="value">0</span>
+            <button type="button" data-action="increment" class="js-button">+1</button>
+        </div>
     </div>
 
     <!-- Task-5 -->
-    <h1 style="color:yellowgreen;">Task-5</h1>
-    <input type="text" placeholder="Ваше имя?" id="name-input" />
-    <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
-
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-5</h1>
+        <input type="text" placeholder="Ваше имя?" id="name-input" />
+        <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+    </div>
     <!-- Task-6 -->
-    <h1 style="color:yellowgreen;">Task-6</h1>
-    <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов" />
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-6</h1>
+        <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов" />
+    </div>
     <!-- Task-7 -->
-    <h1 style="color:yellowgreen;">Task-7</h1>
-
-    <input id="font-size-control" type="range" />
-    <br />
-    <span id="text">Абракадабра!</span>
-
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-7</h1>
+        <input id="font-size-control" type="range" />
+        <br />
+        <span id="text">Абракадабра!</span>
+    </div>
     <!-- Task-8 -->
-    <h1 style="color:yellowgreen;">Task-8</h1>
-    <div id="controls">
-        <input type="number" min="0" max="100" step="1" />
-        <button type="button" data-action="render">Создать</button>
-        <button type="button" data-action="destroy">Очистить</button>
+    <div class="container">
+        <h1 style="color:yellowgreen;">Task-8</h1>
+        <div id="controls">
+            <input type="number" min="0" max="100" step="1" />
+            <button type="button" data-action="render">Создать</button>
+            <button type="button" data-action="destroy">Очистить</button>
+        </div>
+        <div id="boxes"></div>
     </div>
 
-    <div id="boxes"></div>
+    
 
     <script src="js/task-1.js" type="module"></script>
     <script src="js/task-2.js" type="module"></script>
