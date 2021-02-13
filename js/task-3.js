@@ -27,14 +27,16 @@
 //   },
 // ];
 
-
-
-
 // ***************Вариант решения №1***********************
 import imagesObj from './images.js';
 const ulGallery = document.querySelector('ul#gallery');
 ulGallery.className = 'js-gallery';
-const elementLi = imagesObj.map(el => `<li class="js-gallery_li"><img src=${el.url} alt=${el.alt} class="js-img"></li>`).join('');
+const elementLi = imagesObj
+  .map(
+    el =>
+      `<li class="js-gallery_li"><img src=${el.url} alt=${el.alt} class="js-img"></li>`,
+  )
+  .join('');
 console.log(elementLi);
 ulGallery.insertAdjacentHTML('beforeend', elementLi);
 
@@ -59,7 +61,6 @@ ulGallery.insertAdjacentHTML('beforeend', elementLi);
 // ulGallery.className = 'js-gallery';
 // ulGallery.append(...imagesLi);
 
-
 // ***************Вариант решения №3***********************
 // const ulGallery = document.querySelector('ul#gallery');
 // ulGallery.className = 'js-gallery';
@@ -71,5 +72,3 @@ ulGallery.insertAdjacentHTML('beforeend', elementLi);
 //     imgGallery.alt = item.alt;
 //     imgGallery.width = 400;
 // }
-
-

@@ -5,14 +5,12 @@
 // <input type="text" placeholder="Ваше имя?" id="name-input" />
 // <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
 
-
 const inputText = document.querySelector('[id="name-input"]');
 const spanOutput = document.querySelector('[id="name-output"]');
 
-
 inputText.addEventListener('input', () => {
-    spanOutput.textContent = inputText.value;
-    if (inputText.value === '') { spanOutput.textContent = 'незнакомец' }
-}
-)
-
+  spanOutput.textContent = inputText.value;
+  if (inputText.value === '') {
+    spanOutput.textContent = 'незнакомец';
+  }
+});

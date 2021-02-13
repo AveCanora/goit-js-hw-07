@@ -28,38 +28,30 @@ let heightDiv = 30;
 
 //функция создания дочерних элементов
 function createBoxes(amount) {
-
-    for (let i = 0; i < amount; i++) {
-        this.appendChild(document.createElement('div')).style = `
+  for (let i = 0; i < amount; i++) {
+    this.appendChild(document.createElement('div')).style = `
         width: ${widthDiv}px;
         height: ${heightDiv}px; background-color: 
-        rgb(${Math.floor(Math.random() * 100)}%, ${Math.floor(Math.random() * 100)}%, ${Math.floor(Math.random() * 100)}%);
+        rgb(${Math.floor(Math.random() * 100)}%, ${Math.floor(
+      Math.random() * 100,
+    )}%, ${Math.floor(Math.random() * 100)}%);
         margin-left: auto;
         margin-right: auto;`;
-        widthDiv += 10;
-        heightDiv += 10;
-    }
+    widthDiv += 10;
+    heightDiv += 10;
+  }
 }
 //функция удаления
 function destroyBoxes() {
-    this.innerHTML = '';
+  this.innerHTML = '';
 }
 //обработка события нажатия на кнопку "Создать"
 btnRender.addEventListener('click', () => {
-    createBoxes.call(divBoxes, inputNumber.valueAsNumber);
+  createBoxes.call(divBoxes, inputNumber.valueAsNumber);
 });
 //обработка события нажатия на кнопку "Очистить"
 btnDestroy.addEventListener('click', () => {
-    destroyBoxes.call(divBoxes);
-    widthDiv = 30;
-    heightDiv = 30;
+  destroyBoxes.call(divBoxes);
+  widthDiv = 30;
+  heightDiv = 30;
 });
-
-
-
-
-
-
-
-
-
