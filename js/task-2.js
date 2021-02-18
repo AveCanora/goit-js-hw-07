@@ -16,21 +16,16 @@
 // Для создания DOM-узлов используй document.createElement().
 
 const ingredients = [
-    'Картошка',
-    'Грибы',
-    'Чеснок',
-    'Помидоры',
-    'Зелень',
-    'Приправы',
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
 ];
 const ulIngredients = document.querySelector('ul#ingredients');
-ulIngredients.appendChild(document.createElement('h2')).innerHTML = 'Ингридиенты:';
-ulIngredients.style.color = 'blue';
-for (const item of ingredients) { ulIngredients.appendChild(document.createElement('li')).innerHTML = item; }
-// альтернатива циклу метод map
-// ingredients.map(function (element) {
-//     return liIngredients.appendChild(document.createElement('ul')).classList.add(element);
-// });
-
-
-console.log(ulIngredients);
+ulIngredients.appendChild(document.createElement('h2')).innerHTML =
+  'Ингридиенты:';
+ingredients.map(function (element) {
+  ulIngredients.appendChild(document.createElement('li')).innerHTML = element;
+});
