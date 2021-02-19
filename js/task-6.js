@@ -25,14 +25,10 @@
 
 //РЕШЕНИЕ
 const inputText = document.querySelector('[id="validation-input"]');
-inputText.addEventListener('input', () => {
-    if (inputText.value.length <= inputText.getAttribute('data-length')) {
-        inputText.className = 'valid';
-    }
-    else {
-        inputText.className = 'invalid';
-    }
-}
-)
-
-
+inputText.addEventListener('blur', () => {
+  if (inputText.value.length <= inputText.getAttribute('data-length')) {
+    inputText.className = 'valid';
+  } else {
+    inputText.className = 'invalid';
+  }
+});
