@@ -1,20 +1,3 @@
-// Задание 2
-// В HTML есть пустой список ul#ingredients.
-
-// <ul id="ingredients"></ul>
-// В JS есть массив строк.
-
-// const ingredients = [
-//   'Картошка',
-//   'Грибы',
-//   'Чеснок',
-//   'Помидоры',
-//   'Зелень',
-//   'Приправы',
-// ];
-// Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после чего вставит все li за одну операцию в список ul.ingredients.
-// Для создания DOM-узлов используй document.createElement().
-
 const ingredients = [
   'Картошка',
   'Грибы',
@@ -26,6 +9,9 @@ const ingredients = [
 const ulIngredients = document.querySelector('ul#ingredients');
 ulIngredients.appendChild(document.createElement('h2')).innerHTML =
   'Ингридиенты:';
-ingredients.map(function (element) {
-  ulIngredients.appendChild(document.createElement('li')).innerHTML = element;
+const liElements = ingredients.map(function (element) {
+  const liEl = document.createElement('li');
+  liEl.innerHTML = element;
+  return liEl;
 });
+ulIngredients.append(...liElements);
