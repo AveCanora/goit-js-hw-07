@@ -11,7 +11,7 @@ ulIngredients.appendChild(document.createElement('h2')).innerHTML =
   'Ингридиенты:';
 const liElements = ingredients.map(function (element) {
   const liEl = document.createElement('li');
-  liEl.innerHTML = element;
+  liEl.textContent = element;
   return liEl;
 });
 ulIngredients.append(...liElements);

@@ -1,5 +1,4 @@
 let counterValue = 0;
-
 const buttonCounterInc = document.querySelector('[data-action="increment"]');
 const buttonCounterDec = document.querySelector('[data-action="decrement"]');
 const spanCounterDec = document.querySelector('[id="value"]');
